@@ -6,9 +6,10 @@ from task_management import add_reminder, check_reminders
 
 def main():
     model_path = "C:\\student\\project\\voice-assistant\\vosk-model-small-ru-0.22"  
+    recognizer = initialize_recognizer(model_path)  
 
     while True:
-        command = recognize_speech(recognizer)
+        command = recognize_speech(recognizer)  
 
         if command:
             command = command.lower()
