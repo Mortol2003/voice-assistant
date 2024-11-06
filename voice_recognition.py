@@ -22,17 +22,17 @@ def recognize_speech(recognizer):
             if not data:
                 break
             
-            # Преобразуем данные в массив NumPy
+            
             audio_data = np.frombuffer(data[0], dtype=np.int16)
 
-            # Проверяем результат распознавания
+            
             if recognizer.AcceptWaveform(audio_data.tobytes()):
                 result = recognizer.Result()
-                print(result)  # Выводим результат для отладки
+                print(result)  
                 return result
             else:
                 partial_result = recognizer.PartialResult()
-                print(partial_result)  # Выводим частичный результат для отладки
+                print(partial_result)  
 
 def speak(text):
     engine = pyttsx3.init()
