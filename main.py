@@ -5,7 +5,7 @@ from media_control import play_music, control_volume
 from task_management import add_reminder, check_reminders
 
 def main():
-    model_path = "C:\\student\\project\\voice-assistant\\vosk-model-small-ru-0.22"  
+    model_path = "C:\\student\\prodject\\voice-assistant\\vosk-model-small-ru-0.22"  
     recognizer = initialize_recognizer(model_path)  
 
     while True:
